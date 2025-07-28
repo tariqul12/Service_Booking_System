@@ -47,5 +47,9 @@ Finally, the admin can view all bookings.
 [http://127.0.0.1:8000/api/admin/bookings](http://127.0.0.1:8000/api/admin/bookings) GET method
 <img width="944" height="517" alt="Screenshot_9" src="https://github.com/user-attachments/assets/992c1f78-9ebf-40a1-b7d8-80806ac5989d" />
 
+## Seeder
 
+The UserSeeder seeds the users table with one admin and five customer accounts.
+Each user has a name, email, password, and an is_admin flag.
+These users can be used to test login, bookings, and admin functionalities.
 
