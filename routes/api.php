@@ -9,9 +9,13 @@ use App\Http\Controllers\AuthController;
 // })->middleware('auth:sanctum');
 
 
-Route::apiResource('services', \App\Http\Controllers\ServiceController::class);
-Route::apiResource('bookings', \App\Http\Controllers\BookingController::class);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+
+
+Route::apiResource('services', \App\Http\Controllers\ServiceController::class);
+Route::apiResource('bookings', \App\Http\Controllers\BookingController::class);
+
+Route::get('/admin/bookings', [\App\Http\Controllers\BookingController::class, 'index'])->middleware('auth:sanctum');
